@@ -1,8 +1,13 @@
 import React from 'react'
+import { Routes,Route } from 'react-router-dom'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+
+
+<p>hello</p>
+    </div>
   )
 }
 
