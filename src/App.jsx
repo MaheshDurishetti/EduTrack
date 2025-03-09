@@ -6,8 +6,8 @@ import "./App.css";
 import "./assets/nav.css";
 import StatsBanner from "./Components/Banner";
 import Footer from "./Components/Footer";
-import CourseCard from "./Components/CourseCard";
-import Courses from "./Components/Course";
+// import CourseCard from "./Components/CourseCard";
+// import Courses from "./Components/Course";
 function App() {
   const aboutRef = useRef(null);
   const coursesRef = useRef(null);
@@ -117,8 +117,8 @@ function App() {
         </div>
       </div>
     <StatsBanner/>
-    <CourseCard/> 
-   <Courses/>
+    {/* <CourseCard/> 
+   <Courses/> */}
     <Footer/>
   
     </div>
