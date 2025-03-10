@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import "./App.css";
 import "./assets/nav.css";
 import StatsBanner from "./Components/Banner";
+import img1 from "./assets/Images/img1.jpg";
 
 
 function App() {
@@ -81,7 +82,7 @@ function App() {
 
       {/* Image with Text on Right Side */}
       <div className="image-text-container">
-        <img className="wall" src="src/assets/Images/img1.jpg" alt="Wall" />
+      <img className="wall" src={img1} alt="Wall" />;
         <div className="text-content">
           <h2>Welcome to EduTrack</h2>
           <p><strong>"Education is the most powerful weapon which you can use to change the world."</strong> – Nelson Mandela.</p>
