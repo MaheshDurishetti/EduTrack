@@ -1,0 +1,115 @@
+/* Background */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+  }
+  
+  /* Signup Box (Glassmorphism Effect) */
+  .signup-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Heading */
+  .signup-box h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .input-group input {
+    background: rgba(255, 255, 255, 0.3);
+    color: orange;
+  }
+  
+  .input-group select {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+  }
+  
+  .input-group input::placeholder {
+    color: black;
+  }
+  
+  /* Focus Effect */
+  .input-group input:focus,
+  .input-group select:focus {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Signup Button */
+  .signup-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .signup-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Login Redirect */
+  .login-link {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .login-link span {
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 400px) {
+    .signup-box {
+      width: 90%;
+    }
+  }
+  

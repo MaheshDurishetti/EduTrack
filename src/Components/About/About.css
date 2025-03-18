@@ -1,0 +1,69 @@
+/* Background Gradient */
+.about-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+  
+  /* Title Styling */
+  .about-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  /* Highlighted Text */
+  .highlight {
+    color: #ffe600;
+  }
+  
+  /* Description Styling */
+  .about-description, .about-mission {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  /* Subtitle Styling */
+  .about-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* List Styling */
+  .about-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-list li {
+    font-size: 18px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    display: inline-block;
+    width: 80%;
+    font-weight: bold;
+  }
+  
+  /* Image Styling */
+  .about-image {
+    margin: 20px 0;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
