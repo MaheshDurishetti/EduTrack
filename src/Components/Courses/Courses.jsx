@@ -4,27 +4,27 @@ import "./Courses.css"; // Import CSS file
 const courses = [
   {
     name: "Java",
-    image: "/images/java.jpg",
+    image: "src/assets/CoursesImg/javapic.png",
   },
   {
     name: "Python",
-    image: "/images/python.jpg",
+    image: "src/assets/CoursesImg/pythonpic.jpg",
   },
   {
     name: "MERN Stack",
-    image: "/images/mern.jpg",
+    image: "src/assets/CoursesImg/Mern.jpg",
   },
   {
     name: "React.js",
-    image: "/images/reactjs.jpg",
+    image: "src/assets/CoursesImg/react.jpg",
   },
   {
     name: "JavaScript",
-    image: "/images/javascript.jpg",
+    image: "src/assets/CoursesImg/download (1).png",
   },
   {
     name: "HTML & CSS",
-    image: "/images/html-css.jpg",
+    image: "src/assets/CoursesImg/HtmlCSS.jpg",
   }
 ];
 

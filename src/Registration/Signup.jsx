@@ -5,10 +5,9 @@ import "./Signup.css";
 const Signup = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
-    role: "student", // Default role
   });
 
   const handleChange = (e) => {
@@ -18,7 +17,12 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Signup Data:", formData);
-    navigate("/login"); // Redirect to login after signup
+    navigate("/dashboard"); // Redirect after successful signup
+  };
+
+  const handleSignupWithEmail = () => {
+    console.log("Signup with Email:", formData.email);
+    // Here, you can integrate a backend API call for email-based signup
   };
 
   return (
@@ -29,9 +33,9 @@ const Signup = () => {
           <div className="input-group">
             <input
               type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
+              name="username"
+              placeholder="Username"
+              value={formData.username}
               onChange={handleChange}
               required
             />
@@ -56,17 +60,20 @@ const Signup = () => {
               required
             />
           </div>
-          <div className="input-group">
-            <select name="role" value={formData.role} onChange={handleChange}>
-              <option value="student">Student</option>
-              <option value="teacher">Teacher</option>
-              <option value="admin">Admin</option>
-            </select>
-          </div>
-          <button type="submit" className="signup-button">Register</button>
+          <button type="submit" className="signup-button">
+            Sign Up
+          </button>
         </form>
+
+        <p className="or-text">OR</p>
+
+        <button className="email-signup-button" onClick={handleSignupWithEmail}>
+          Sign Up with Email
+        </button>
+
         <p className="login-link">
-          Already have an account? <span onClick={() => navigate("/login")}>Login</span>
+          Already have an account?{" "}
+          <span onClick={() => navigate("/login")}>Login</span>
         </p>
       </div>
     </div>

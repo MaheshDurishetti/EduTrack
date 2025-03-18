@@ -5,37 +5,37 @@ const achievements = [
     name: "John Doe",
     company: "Google",
     package: "₹12 LPA",
-    image: "https://via.placeholder.com/150?text=John+Doe",
+    image: "src/assets/AchiversPics/images.jpg",
   },
   {
     name: "Jane Smith",
     company: "Amazon",
     package: "₹15 LPA",
-    image: "https://via.placeholder.com/150?text=Jane+Smith",
+    image: "src/assets/AchiversPics/images (2).jpg",
   },
   {
     name: "Michael Johnson",
     company: "Microsoft",
     package: "₹18 LPA",
-    image: "https://via.placeholder.com/150?text=Michael",
+    image: "src/assets/AchiversPics/images (3).jpg",
   },
   {
     name: "Emily Brown",
     company: "Facebook",
     package: "₹14 LPA",
-    image: "https://via.placeholder.com/150?text=Emily",
+    image: "src/assets/AchiversPics/images (4).jpg",
   },
   {
     name: "David Wilson",
     company: "Apple",
     package: "₹20 LPA",
-    image: "https://via.placeholder.com/150?text=David",
+    image: "src/assets/AchiversPics/images.jpg",
   },
   {
     name: "Sophia Martinez",
     company: "Netflix",
     package: "₹13 LPA",
-    image: "https://via.placeholder.com/150?text=Sophia",
+    image: "src/assets/AchiversPics/images.jpg",
   },
 ];
 

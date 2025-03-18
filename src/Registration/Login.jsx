@@ -5,7 +5,7 @@ import "./Login.css";
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    email: "",
+    identifier: "", // Can be email or username
     password: "",
   });
 
@@ -19,6 +19,11 @@ const Login = () => {
     navigate("/dashboard"); // Redirect to dashboard after login
   };
 
+  const handleContinueWithEmail = () => {
+    console.log("Continue with Email:", formData.identifier);
+    // Here, you can integrate a backend API call for email login
+  };
+
   return (
     <div className="login-container">
       <div className="login-box">
@@ -26,10 +31,10 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
+              type="text"
+              name="identifier"
+              placeholder="Username or Email"
+              value={formData.identifier}
               onChange={handleChange}
               required
             />
@@ -44,8 +49,17 @@ const Login = () => {
               required
             />
           </div>
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-button">
+            Login
+          </button>
         </form>
+
+        <p className="or-text">OR</p>
+
+        <button className="email-login-button" onClick={handleContinueWithEmail}>
+          Continue with Email
+        </button>
+
         <p className="signup-link">
           Don't have an account? <span onClick={() => navigate("/signup")}>Sign Up</span>
         </p>
