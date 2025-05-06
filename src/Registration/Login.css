@@ -1,126 +1,126 @@
 /* Background */
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+/* Login Box (Glassmorphism Effect) */
+.login-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  /* Login Box (Glassmorphism Effect) */
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.login-box h2 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: 0.3s;
+}
+
+.input-group input::placeholder {
+  color: white;
+}
+
+/* Focus Effect */
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.login-button:hover {
+  transform: scale(1.05);
+}
+
+/* Signup Redirect */
+.signup-link {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.signup-link span {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
   .login-box {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 350px;
-    animation: fadeIn 1s ease-in-out;
+    width: 90%;
   }
-  
-  /* Fade-in Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Heading */
-  .login-box h2 {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 20px;
-  }
-  
-  /* Input Fields */
-  .input-group {
-    margin-bottom: 15px;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-    transition: 0.3s;
-  }
-  
-  .input-group input::placeholder {
-    color: white;
-  }
-  
-  /* Focus Effect */
-  .input-group input:focus {
-    background: rgba(255, 255, 255, 0.6);
-  }
-  
-  /* Login Button */
-  .login-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  /* Hover Effect */
-  .login-button:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Signup Redirect */
-  .signup-link {
-    margin-top: 10px;
-    color: white;
-    font-size: 14px;
-  }
-  
-  .signup-link span {
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  /* Responsive */
-  @media (max-width: 400px) {
-    .login-box {
-      width: 90%;
-    }
-  }
-  .or-text {
-    text-align: center;
-    margin: 10px 0;
-    font-weight: bold;
-  }
-  
-  .email-login-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: #4285F4;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  .email-login-button:hover {
-    background-color: #357ae8;
-  }
-  
+}
+
+.or-text {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.email-login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #4285F4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.email-login-button:hover {
+  background-color: #357ae8;
+}

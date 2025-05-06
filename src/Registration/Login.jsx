@@ -1,40 +1,59 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import "./Login.css"; // This will apply the styling you provided
 
 const Login = () => {
   const navigate = useNavigate();
+  
   const [formData, setFormData] = useState({
-    identifier: "", // Can be email or username
+    email: "",
     password: "",
   });
+
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Login Data:", formData);
-    navigate("/dashboard"); // Redirect to dashboard after login
-  };
+  const handleLogin = async (role) => {
+    setError("");
 
-  const handleContinueWithEmail = () => {
-    console.log("Continue with Email:", formData.identifier);
-    // Here, you can integrate a backend API call for email login
+    try {
+      const url = `http://localhost:8081/api/auth/login/${role}`;
+      const res = await axios.post(url, formData);
+      const user = res.data;
+
+      // Navigate based on user role
+      if (user.role === "STUDENT") {
+        navigate("/student-dashboard");
+      } else if (user.role === "TEACHER") {
+        navigate("/teacher-dashboard");
+      } else if (user.role === "ADMIN") {
+        navigate("/admin-dashboard");
+      } else {
+        setError("Unknown user role.");
+      }
+    } catch (err) {
+      setError("Invalid credentials. Please try again.");
+    }
   };
 
   return (
     <div className="login-container">
       <div className="login-box">
         <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
+        {error && <p className="error-message">{error}</p>}
+
+        {/* Form Submission */}
+        <form>
           <div className="input-group">
             <input
-              type="text"
-              name="identifier"
-              placeholder="Username or Email"
-              value={formData.identifier}
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
               onChange={handleChange}
               required
             />
@@ -49,19 +68,22 @@ const Login = () => {
               required
             />
           </div>
-          <button type="submit" className="login-button">
-            Login
+          
+          {/* Role-based Login Buttons */}
+          <button type="button" onClick={() => handleLogin("student")} className="login-button">
+            Login as Student
+          </button>
+          <button type="button" onClick={() => handleLogin("teacher")} className="login-button">
+            Login as Teacher
+          </button>
+          <button type="button" onClick={() => handleLogin("admin")} className="login-button">
+            Login as Admin
           </button>
         </form>
 
-        <p className="or-text">OR</p>
-
-        <button className="email-login-button" onClick={handleContinueWithEmail}>
-          Continue with Email
-        </button>
-
         <p className="signup-link">
-          Don't have an account? <span onClick={() => navigate("/signup")}>Sign Up</span>
+          Don’t have an account?{" "}
+          <span onClick={() => navigate("/signup")}>Sign up</span>
         </p>
       </div>
     </div>
